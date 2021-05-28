@@ -1,0 +1,74 @@
+---
+title: "OXIDACION DE AMONIACO A ACIDO NITRICO"
+output: github_document
+---
+
+`` `{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## oxidacion de amoniaco
+
+este trabajo nos muestra los datos operativos de una planta de oxidación de amoniaco a ácido nítrico. 
+
+## Base de datos stackloss
+
+`` `{r stackloss}
+ver (stackloss)
+fuerza (stackloss)
+''
+
+datos (stackloss)
+stackloss
+
+# porcentaje de acido = (acid.conc. / 10) + 50
+
+nombre (stackloss)
+ncol(stackloss)
+NROW(stackloss)
+
+`` `{r}
+final (stackloss)
+''
+
+`` `{r}
+library(tidyverse)
+
+mutate(stackloss, porcentaje_de_acido = ((Acid.Conc. / 10) + 50))
+
+
+''
+
+
+## Relacion T° H2O y Planta
+
+
+ 
+`` `{r}
+mutate (stackloss, Relacion.TF = Air.Flow / Water.Temp)
+
+''
+colsums (Relacion.TF)
+
+
+`` `{r}
+60.46128 / 21
+
+# como conclusion de este analisis se puede decir que el 2.879109 es la relacion que existe.
+
+## Filtracion T°-- 19° y 23°
+
+`` `{r}
+
+filtro (stackloss, Water.Temp == 19)
+
+''
+
+filtro (stackloss, Water.Temp == 23)
+
+''
+
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
